@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Mover pallet
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-button expand="block" icon-left (click)="leerPos()"><ion-icon name="qr-scanner"></ion-icon>Leer Posición</ion-button >
+<ion-card *ngIf="pos">
+  <ion-card-content>
+    Posición: {{ pos }}
+  </ion-card-content>
+</ion-card>
+
+<ion-button expand="block" icon-left (click)="leerPallet()"><ion-icon name="barcode"></ion-icon>Leer Pallet</ion-button>
+
+<ion-card *ngIf="pallet">
+  <ion-card-content>
+    Pallet: {{ pallet }}
+  </ion-card-content>
+</ion-card>
+
+<ion-button expand="block" icon-left (click)="leerNuevaPos()"><ion-icon name="qr-scanner"></ion-icon>Leer nueva posición</ion-button >
+<ion-card *ngIf="nuevaPos">
+  <ion-card-content>
+    Posición: {{ nuevaPos }}
+  </ion-card-content>
+</ion-card>
+
+
+
+<ion-button *ngIf="pallet && pos && nuevaPos" expand="block" icon-left (click)="Enviar()"><ion-icon name="letter"></ion-icon>Enviar datos</ion-button >
+</ion-content>
+
