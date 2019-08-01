@@ -53,14 +53,13 @@ export class Tab3Page {
 
     this.http.post("http://127.0.0.1:3000/", postData, requestOptions)
       .subscribe(data => {
-        console.log(data['_body']);
+        console.log(data['body']);
        }, error => {
         console.log(error);
       });
     this.pallet = null;
     this.pos = null;
     this.nuevaPos = null;
-      
   }
 
 }
